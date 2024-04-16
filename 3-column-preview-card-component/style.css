@@ -1,0 +1,170 @@
+:root {
+  /* Sedans */
+  --clr-primary-sedans: 31, 77%, 52%;
+  --clr-primary-sedans-lighter: hsl(42, 100%, 73%);
+  /* SUVs */
+  --clr-primary-suvs: 184, 100%, 22%;
+  --clr-primary-suvs-lighter: hsl(184, 67%, 45%);
+  /* Luxury */
+  --clr-primary-luxury: 179, 100%, 13%;
+  --clr-primary-luxury-lighter: hsl(170, 76%, 41%);
+  
+  /* paragraphs */
+  --clr-neutral-white: hsla(0, 0%, 100%, .75);
+  /* Background, headings, buttons */
+  --clr-neutral-light-gray: hsl(0, 0%, 95%);
+
+  --clr-primary-sedans-hsl: hsl(var(--clr-primary-sedans));
+  --clr-primary-suvs-hsl: hsl(var(--clr-primary-suvs));
+  --clr-primary-luxury-hsl: hsl(var(--clr-primary-luxury));
+
+  --ff-default: 'Lexend Deca', sans-serif;
+  --ff-headings: 'Big Shoulders Display', sans-serif;
+
+  --fs-base: 0.833333rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 3rem;
+
+  --fw-regular: 400;
+  --fw-semibold: 700;
+
+  color-scheme: light dark;
+
+  font-family: var(--ff-default);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-white);
+  text-transform: uppercase;
+}
+
+/* Main Site */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+}
+
+main {
+  font-size: var(--fs-base);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.sedans h2,
+.suvs h2,
+.luxury h2 {
+  padding-bottom: 1rem;
+}
+
+.sedans p,
+.suvs p,
+.luxury p {
+  text-wrap: balance;
+}
+
+.sedans {
+  --clr-btn-accent: var(--clr-primary-sedans-hsl);
+  --clr-btn-primary: var(--clr-neutral-light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--clr-primary-sedans-hsl);
+  color: var(--clr-neutral-white);
+}
+
+.suvs {
+  --clr-btn-accent: var(--clr-primary-suvs-hsl);
+  --clr-btn-primary: var(--clr-neutral-light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--clr-primary-suvs-hsl);
+  color: var(--clr-neutral-white);
+}
+
+.luxury {
+  --clr-btn-accent: var(--clr-primary-luxury-hsl);
+  --clr-btn-primary: var(--clr-neutral-light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--clr-primary-luxury-hsl);
+  color: var(--clr-neutral-white);
+}
+
+/* Utilities */
+
+.btn {
+  border: 1px solid var(--clr-btn-primary);
+  border-radius: 1000px;
+  background-color: var(--clr-btn-primary);
+  max-width: 110px;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-btn-accent);
+  padding: .6rem 1rem;
+}
+
+.btn:hover,
+.bth:focus {
+  background-color: var(--clr-btn-accent);
+  color: var(--clr-btn-primary);
+}
+
+/* Replacing vehicle color in svg */
+
+.sedan__svg svg path {
+  fill: var(--clr-primary-sedans-lighter);
+}
+
+.suvs__svg svg path {
+  fill: var(--clr-primary-suvs-lighter);
+}
+
+.luxury__svg svg path {
+  fill: var(--clr-primary-luxury-lighter);
+}
+
+@media (min-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+    max-width: 900px;
+  }
+}
+
+
+/* Frontend Mentor Footer */
+.attribution 
+{
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

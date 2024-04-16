@@ -1,0 +1,215 @@
+/* GLOBALS RESETS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* VARIABLES */
+
+:root {
+
+  --color-primary-blue-light: 225, 100%, 94%;
+  --color-primary-blue-bright: 245, 75%, 52%;
+  --color-secondary-hover: 245, 83%, 68%;
+
+  --color-primary-400: hsl(var(--color-primary-blue-light));
+  --color-primary-600: hsl(var(--color-primary-blue-bright));
+  --color-secondary-600: hsl(var(--color-secondary-hover));
+
+  --color-neutral-blue-light: 225, 100%, 98%;
+  --color-neutral-blue: 224, 23%, 55%;
+  --color-neutral-blue-dark: 223, 47%, 23%;
+
+  --color-neutral-200: hsl(var(--color-neutral-blue-light));
+  --color-neutral-400: hsl(var(--color-neutral-blue));
+  --color-neutral-600: hsl(var(--color-neutral-blue-dark));
+
+  --ff-default: 'Red Hat Display', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --fs-300: .8rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+
+  --bg-image-mobile: url("images/pattern-background-mobile.svg");
+  --bg-image-desktop: url("images/pattern-background-desktop.svg");
+
+  font-family: var(--ff-default);
+  font-size: var(--fs-400);
+}
+
+/* SECTIONS */
+body {
+  background-color: var(--color-primary-400);
+  background-image: var(--bg-image-mobile);
+  background-repeat: no-repeat;
+} 
+
+main {
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  max-width: 400px;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--color-neutral-200);
+  box-shadow: 5px 10px 20px 0 hsl(var(--color-neutral-blue), 0.2);
+}
+
+h1 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-black);
+  color: var(--color-neutral-blue-dark);
+}
+
+.order__summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order__summary img {
+  width: 100%;
+}
+
+.order__summary p {
+  text-align: center;
+  color: hsl(var(--color-neutral-blue), .8);
+  font-weight: var(--fw-regular);
+  margin-inline: 2rem;
+}
+
+.order__options {
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: hsl(var(--color-neutral-blue), 0.05);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+
+.plan__price {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan__price h2 {
+  font-weight: var(--fw-bold);
+  margin-right: 3rem;
+}
+
+.plan__price p {
+  color: hsl(var(--color-neutral-blue), .8);
+  font-weight: var(--fw-bold);
+}
+
+.change a {
+  font-weight: var(--fw-black);
+  font-size: var(--fs-300);
+  color: var(--color-primary-600);
+  transition-duration: 250ms;
+}
+
+.change a:hover,
+.change a:focus {
+  text-decoration: none;
+  color: var(--color-secondary-600);
+}
+
+.payment__and__cancel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.button {
+  color: var(--color-primary-400);
+  font-weight: var(--fw-black);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 4rem;
+  background-color: var(--color-primary-600);
+  box-shadow: 5px 10px 20px 0 hsl(var(--color-primary-blue-bright), 0.2);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--color-secondary-600);
+}
+
+.payment__and__cancel a {
+  color: hsl(var(--color-neutral-blue));
+  text-decoration: none;
+  font-weight: var(--fw-black);
+  cursor: pointer;
+}
+
+.payment__and__cancel a:hover,
+.payment__and__cancel a:focus {
+  color: var(--color-secondary-600);
+}
+
+/* UTILITIES */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* FOOTER */
+
+.attribution 
+{
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a 
+{
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+} 

@@ -1,0 +1,197 @@
+/* Base and Variables */
+
+:root {
+
+  --clr-primary-light: 215, 51%, 70%;
+  --clr-primary: 178, 100%, 50%;
+
+  --clr-blue-mainBG: hsl(217, 54%, 11%);
+  --clr-blue-cardBG: hsl(216, 50%, 16%);
+  --clr-blue-line: hsl(215, 32%, 27%);
+  --clr-neutral: hsl(0, 0%, 100%);
+
+  --clr-primary-light-hsl: hsl(var(--clr-primary-light));
+  --clr-primary-hsl: hsl(var(--clr-primary));
+  
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --fs-base: 1.125rem;
+  --fs-500: 1.5rem;
+  --fs-600: 1.75rem;
+
+  --border-radius: 1rem;
+
+  font-family: 'Outfit', sans-serif;
+  font-size: var(--fs-base);
+  color: var(--clr-neutral);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/* Main Site */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--clr-blue-mainBG);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  max-width: 400px;
+  max-height: 680px;
+  background-color: var(--clr-blue-cardBG);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.NFT__title a,
+.creator__name a {
+  text-decoration: none;
+  color: var(--clr-neutral);
+}
+
+.img__container {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow:hidden;
+  cursor: pointer;
+}
+
+.img__container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img__container svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.img__container .overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 250ms ease;
+  background-color: hsl(var(--clr-primary), 0.5);
+}
+
+.img__container:hover .overlay,
+.img__container:focus .overlay {
+  opacity: 1;
+}
+
+.NFT__title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-600);
+  margin: 1rem 0 1rem 0;
+  cursor: pointer;
+}
+
+.NFT__description {
+  color: var(--clr-primary-light-hsl);
+  font-weight: var(--fw-300);
+  margin: 1rem 0 1rem 0;
+}
+
+.NFT__price__and__time {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.NFT__price__and__time .price svg {
+  fill: var(--clr-primary-hsl);
+}
+
+.NFT__price__and__time .price {
+  display: flex;
+  color: var(--clr-primary-hsl);
+  align-items: center;
+  gap: .25rem;
+}
+
+.NFT__price__and__time .time {
+  display: flex;
+  color: var(--clr-primary-light-hsl);
+  align-items: center;
+  gap: .25rem;
+}
+
+.NFT__price__and__time .time svg {
+  fill: var(--clr-primary-light-hsl);
+}
+
+.line {
+  border-bottom: 1px solid var(--clr-blue-line);
+}
+
+.NFT__creator {
+  display: flex;
+  align-items: center;
+  color: var(--clr-primary-light-hsl);
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.NFT__creator img {
+  width: 40px;
+  border: 1px solid var(--clr-neutral);
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.creator__name {
+  cursor: pointer;
+}
+
+/* Hover and Focus Effects */
+
+.NFT__title a:hover,
+.NFT__title a:focus {
+  color: var(--clr-primary-hsl);
+}
+
+.creator__name a:hover,
+.creator__name a:focus {
+  color: var(--clr-primary-hsl);
+}
+
+/* Frontend Mentor Footer */
+
+.attribution 
+{
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a 
+{
+  color: hsl(228, 45%, 44%);
+}
