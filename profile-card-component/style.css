@@ -26,11 +26,6 @@
 
   --body-bg: var(--top-bg), var(--bottom-bg), var(--clr-primary);
 
-/* 
-  <img class="top__left" src="images/bg-pattern-top.svg" aria-hidden="true" />
-  <img class="bottom__right" src="images/bg-pattern-bottom.svg" aria-hidden="true" /> 
-*/
-
 }
 
 * {
