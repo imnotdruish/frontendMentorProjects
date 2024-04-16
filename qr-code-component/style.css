@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --white: hsla(0, 0%, 100%, 1);
+  --neutral-color-light: hsla(212, 45%, 89%, 1);
+  --neutral-color: hsla(220, 15%, 55%, 1);
+  --neutral-color-dark: hsla(218, 44%, 22%, 1);
+  --neutral-color-dark-blur: hsla(218, 44%, 22%, 0.1);
+  --fs-base: 0.9375rem;
+  --fs-large: 1.5rem;
+  --fw-bold: 700;
+
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--neutral-color-light);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 10dvh auto;
+  background-color: var(--white);
+  border-radius: 1rem;
+  color: var(--neutral-color-dark);
+  box-shadow: 5px 5px 5px 0 var(--neutral-color-dark-blur);
+}
+
+main img {
+  width: 90%;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+main p {
+  text-align: center;
+  padding: 0 2rem 2rem 2rem;
+
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-large);
+  padding-top: 1.5rem;
+}
+
+.call__to__action {
+  color: var(--neutral-color);
+  font-size: var(--fs-base);
+  padding-bottom: 2rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --primary-color: hsl(47, 88%, 63%);
+  --neutral-light: hsl(0, 0%, 100%);
+  --neutral: hsl(0, 0%, 50%);
+  --neutral-dark: hsl(0, 0%, 7%);
+  --fw-normal: 500;
+  --fw-bold: 800;
+  --ff-primary: 'Figtree', sans-serif;
+  --fs-normal: 1rem;
+  --fs-small: .75rem;
+  --fs-large: 1.5rem;
+  --margin-base: 1rem;
+  --duration: 250ms;
+
+}
+
+body {
+  background-color: var(--primary-color);
+  font-size: var(--fs-normal);
+  font-family: var(--ff-primary);
+  color: var(--neutral);
+}
+
+main {
+  margin: 20rem auto;
+  max-width: 400px;
+  width: 90%;
+  padding: 1.25rem;
+  background-color: var(--neutral-light);
+  border-radius: 1.5rem;
+  border: 1px solid var(--neutral-dark);
+  transform:translate(0);
+}
+
+.course__article__img {
+  border-radius: .75rem;
+  width: 100%;
+}
+
+.course__information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--margin-base);
+}
+
+.course__type {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--neutral-dark);
+  font-weight: var(--fw-bold);
+  border-radius: .5rem;
+  margin-top: 1.5rem;
+  margin-bottom: var(--margin-base);
+  padding: .5rem 1rem;
+  align-items: left;
+}
+
+.publish__date {
+  color: var(--neutral-dark);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+.course__title {
+  font-size: var(--fs-large);
+  margin-bottom: var(--margin-base);
+}
+
+
+.course__title a {
+  text-decoration: none;
+  color: var(--neutral-dark);
+  transition-duration: var(--duration);
+}
+
+.course__title a::before {
+  content:'';
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.5rem;
+  pointer-events: none;
+  box-shadow: 10px 10px 0 1px var(--neutral-dark);
+  transition-duration: var(--duration);
+}
+
+.course__title a:hover,
+.course__title a:focus {
+  color: var(--primary-color);
+}
+
+.course__title a:hover::before,
+.course__title a:focus::before {
+  box-shadow: 20px 20px 0 0 var(--neutral-dark);
+}
+
+.course__description {
+  margin-bottom: var(--margin-base);
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.creator__img {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+}
+
+.creator__name {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  color: var(--neutral-dark);
+}
+
+
+.attribution { 
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
