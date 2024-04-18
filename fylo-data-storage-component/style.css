@@ -1,0 +1,224 @@
+:root {
+
+  --clr-primary-gradient: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+  --clr-neutral-light: hsl(243, 100%, 93%);
+  --clr-neutral: hsl(229, 7%, 55%);
+  --clr-neutral-dark: hsl(228, 56%, 26%);
+  --clr-neutral-darker: hsl(229, 57%, 11%);
+
+  --clr-slider-bg: hsl(228, 56%, 19%);
+  --clr-icons: hsl(228, 55%, 62%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-base: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 2.5rem;
+
+  --ff-default: 'Raleway', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Main Site */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: url('images/bg-mobile.png');
+  background-color: var(--clr-neutral-darker);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--ff-default);
+  color: var(--clr-neutral-light);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.logo__and__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 2.5rem 7rem 2.5rem 2rem;
+  border-radius: .75rem 6rem .75rem .75rem;
+  background-color: var(--clr-neutral-dark);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.storage__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  background-color: var(--clr-neutral-dark);
+  border-radius: .75rem;
+  padding: 2rem;
+  max-height: 250px;
+  color: var(--clr-neutral-light);
+  font-size: var(--fs-base);
+}
+
+.storage__container span {
+  font-weight: var(--fw-bold);
+}
+
+.bar {
+  background-color: var(--clr-slider-bg);
+  height: 16px;
+  border-radius: 1000vh;
+}
+
+.bar__progress {
+  background: var(--clr-primary-gradient);
+  position: relative;
+  margin-block: 1px;
+  align-self: center;
+  justify-self: center;
+  height: 14px;
+  width: 75%;
+  border-radius: 1000vh;
+}
+
+.bar__slider {
+  position: absolute;
+  right: 0;
+  margin: 1px;
+  background: var(--clr-neutral-light);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+
+}
+
+.storage__range {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.storage__left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  color: var(--clr-neutral);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  font-size: var(--fs-base);
+  background-color: white;
+}
+
+.storage__left__number {
+  color: var(--clr-neutral-darker);
+  font-size: var(--fs-900);
+}
+
+/* Utilities */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--clr-neutral-darker);
+  width: 50px;
+  height: 50px;
+  border-radius: .5rem;
+  border: none;
+}
+
+.btn svg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn svg path {
+  fill: var(--clr-icons);
+}
+
+/* Frontend Mentor Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--clr-neutral-light);
+}
+
+@media (min-width: 850px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+  }
+
+  .storage__container {
+    align-self: end;
+    justify-content: space-evenly;
+    max-height: 150px;
+    min-width: 500px;
+  }
+
+  .storage__range {
+    margin-bottom: 0;
+  }
+
+  .storage__left {
+    top: -30%;
+    right: 6.5%;
+    gap: 0.5rem;
+    transform: translateX(0);
+    border-radius: .75rem .75rem 0 .75rem;
+    left: unset;
+    bottom: unset;
+    width: 35%;
+    padding: .75rem;
+
+  }
+
+  .storage__left::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 10px;
+    aspect-ratio: 1;
+    bottom: -18px;
+    right: 0;
+    clip-path: polygon(100% 100%,0 0,100% 0);
+    padding: .5rem;
+  }
+
+}
