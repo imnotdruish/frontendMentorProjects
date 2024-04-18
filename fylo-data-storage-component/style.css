@@ -179,6 +179,14 @@ main {
 }
 
 @media (min-width: 850px) {
+  
+  body {
+    background: url('images/bg-desktop.png');
+    background-color: var(--clr-neutral-darker);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   main {
     display: flex;
     flex-direction: row;

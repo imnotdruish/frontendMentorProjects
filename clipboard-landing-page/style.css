@@ -1,0 +1,53 @@
+:root {
+
+  --clr-primary: ;
+
+  --clr-neutral-light: ;
+  --clr-neutral: ;
+  --clr-neutral-dark: ;
+  --clr-neutral-darker: ;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-base: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 2.5rem;
+
+  --ff-default: '', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Main Site */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: var(--ff-default);
+}
+
+
+/* Frontend Mentor Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: inherit;
+}
