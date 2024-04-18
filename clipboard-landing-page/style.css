@@ -31,6 +31,9 @@
   --ff-default: 'Bai Jamjuree', sans-serif;
 /*
   color-scheme: dark light;
+
+  Needs some work and maybe other containers to cut down on CSS bloat.
+
 */
 }
 
