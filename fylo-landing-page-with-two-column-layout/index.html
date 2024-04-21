@@ -36,10 +36,12 @@
         <p class="hero__info">
           Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.
         </p>
-        <form action="submit" class="email">
-          <input type="email" class="input" placeholder="Enter your email...">
-          <button class="started">Get Started</button>
-        </form>
+        <div class="hero__form">
+          <form action="submit" class="email">
+            <input type="email" class="input" placeholder="Enter your email...">
+            <button class="started">Get Started</button>
+          </form>
+        </div>
       </div>
     </section>
     <section class="productive">
@@ -85,41 +87,45 @@
       </div>
     </section>
     <section class="early__access">
-      <h2>
-        Get early access today
-      </h2>
-      <p>
-        It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
-      </p>
-      <form action="submit">
-        <input type="email" name="EarlyAccess" id="get__early__access" placeholder="email@example.com">
-        <button type="submit">Get Started For Free</button>
-      </form>
+      <div class="early__access__text">
+        <h2>
+          Get early access today
+        </h2>
+        <p>
+          It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <div class="early__access__form">
+        <form action="submit">
+          <input type="email" name="EarlyAccess" id="get__early__access" placeholder="email@example.com">
+          <button type="submit">Get Started For Free</button>
+        </form>
+      </div>
     </section>
   </main>
   <footer>
-    <div class="footer__contact">
-      <div class="footer__contact__logo">
-        <img src="images/logo-white.svg" alt="Fylo Logo">
+    <div class="footer__contact__logo">
+      <img src="images/logo-white.svg" alt="Fylo Logo">
+    </div>
+    <div class="footer__contact__options">
+      <div class="contact__phone">
+        <img src="images/icon-phone.svg" alt="Phone Icon">
+        <p>Phone: +1-543-123-4567</p>
       </div>
-      <div class="footer__contact__options">
-        <div class="contact__phone">
-          <img src="images/icon-phone.svg" alt="Phone Icon">
-          <p>Phone: +1-543-123-4567</p>
-        </div>
-        <div class="contact__email">
-          <img src="images/icon-email.svg" alt="Google Mail Icon">
-          <p>example@fylo.com</p>
-        </div>
+      <div class="contact__email">
+        <img src="images/icon-email.svg" alt="Google Mail Icon">
+        <p>example@fylo.com</p>
       </div>
     </div>
-    <div class="footer__nav">
+    <div class="footer__nav first">
       <ul type="list" class="footer__nav__list top">
         <li class="footer__nav__list__item"><a href="#" alt="">About Us</a></li>
         <li class="footer__nav__list__item"><a href="#" alt="">Jobs</a></li>
         <li class="footer__nav__list__item"><a href="#" alt="">Press</a></li>
         <li class="footer__nav__list__item"><a href="#" alt="">Blog</a></li>
       </ul>
+    </div>
+    <div class="footer__nav second">
       <ul type="list" class="footer__nav__list bottom">
         <li class="footer__nav__list__item"><a href="#" alt="">Contact Us</a></li>
         <li class="footer__nav__list__item"><a href="#" alt="">Terms</a></li>
