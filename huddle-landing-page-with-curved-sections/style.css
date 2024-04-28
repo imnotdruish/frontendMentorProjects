@@ -6,6 +6,7 @@
 
   --clr-neutral: 192, 100%, 9%;
   --clr-neutral-light: 207, 100%, 98%;
+  --clr-neutral-grey: 207, 23%, 62%;
   
   --clr-primary-hsl: hsl(var(--clr-primary));
   --clr-primary-light-hsl: hsl(var(--clr-primary-light));
@@ -13,6 +14,7 @@
 
   --clr-neutral-hsl: hsl(var(--clr-neutral));
   --clr-neutral-light-hsl: hsl(var(--clr-neutral-light));
+  --clr-neutral-grey-hsl: hsl(var(--clr-neutral-grey));
 
   --fw-regular: 400;
   --fw-semibold: 600;
@@ -25,7 +27,7 @@
   --fs-600: 1.5rem;
   --fs-700: 1.75rem;
   --fs-800: 2rem;
-  --fs-900: 3rem;
+  --fs-900: 4rem;
 
   --ff-accent: 'Poppins', sans-serif;
   --ff-default: 'Open Sans', sans-serif;
@@ -54,6 +56,81 @@ img {
 
 /* Main Site */
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.header__img {
+  width: 100px;
+}
+
+.btn__white {
+  background-color: white;
+  color: var(--clr-primary-hsl);
+  border: 1px solid var(--clr-primary-hsl);
+  border-radius: 1000vh;
+  padding: .3rem 1.5rem;
+  font-size: var(--fs-200);
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-wrap: balance;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.hero__container button {
+  padding: .75rem 2rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 1000vh;
+  font-weight: var(--fw-semibold);
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 0%, 0.2);
+}
+
+.hero__img {
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.communities,
+.messages {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.communities__number,
+.messages__number {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+}
+
+.communities__text,
+.messages__text {
+  color: var(--clr-neutral-grey-hsl);
+}
+
+.communities__img,
+.messages__img {
+  width: 30px;
+}
+
 .grow__content,
 .conversations__content,
 .users__content {
@@ -71,6 +148,7 @@ img {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  margin-block: 8rem;
 }
 
 .build__button button {
@@ -78,6 +156,7 @@ img {
   border: none;
   border-radius: 1000vh;
   font-weight: var(--fw-semibold);
+  box-shadow: 0 0 10px 0 hsl(0, 0%, 0%, 0.2);
 }
 
 .footer__wrapper {
@@ -197,6 +276,10 @@ img {
 
 .grow__content,
 .users__content {
+  padding: 2rem;
+}
+
+.conversations__content {
   padding: 2rem;
 }
 
