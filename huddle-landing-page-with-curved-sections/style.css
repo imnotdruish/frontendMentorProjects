@@ -4,7 +4,8 @@
   --clr-primary-light: 321, 100%, 78%;
   --clr-accent: 0, 100%, 63%;
 
-  --clr-neutral: 192, 100%, 9%;
+  --clr-neutral-dark: 192, 100%, 9%;
+  --clr-neutral: 193, 100%, 50%;
   --clr-neutral-light: 207, 100%, 98%;
   --clr-neutral-grey: 207, 23%, 62%;
   
@@ -12,6 +13,7 @@
   --clr-primary-light-hsl: hsl(var(--clr-primary-light));
   --clr-accent-hsl: hsl(var(--clr-accent));
 
+  --clr-neutral-dark-hsl: hsl(var(--clr-neutral-dark));
   --clr-neutral-hsl: hsl(var(--clr-neutral));
   --clr-neutral-light-hsl: hsl(var(--clr-neutral-light));
   --clr-neutral-grey-hsl: hsl(var(--clr-neutral-grey));
@@ -160,7 +162,7 @@ header {
 }
 
 .footer__wrapper {
-  background-color: var(--clr-neutral-hsl);
+  background-color: var(--clr-neutral-dark-hsl);
   color: white;
 }
 
@@ -191,6 +193,8 @@ header {
 
 .newsletter__form input {
   padding: 1rem;
+  border: 2px solid white;
+  outline: none;
   border-radius: .5rem;
   width: 100%;
 }
@@ -250,6 +254,26 @@ header {
 .btn__pink {
   background-color: var(--clr-primary-hsl);
   color: white;
+}
+
+.btn__pink:hover,
+.btn__pink:focus {
+  background-color: var(--clr-primary-light-hsl);
+}
+
+.btn__white:hover,
+.btn__white:focus {
+  border: 1px solid var(--clr-primary-light-hsl);
+  color: var(--clr-primary-light-hsl);
+}
+
+.newsletter__form form input:focus {
+  border-color: var(--clr-primary-hsl);
+}
+
+.social__links a:hover,
+.social__links a:focus {
+  color: var(--clr-neutral-hsl);
 }
 
 /* Background waves */
