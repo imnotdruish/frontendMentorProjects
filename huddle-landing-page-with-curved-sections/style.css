@@ -29,6 +29,7 @@
   --fs-600: 1.5rem;
   --fs-700: 1.75rem;
   --fs-800: 2rem;
+  --fs-850: 2.5rem;
   --fs-900: 4rem;
 
   --ff-accent: 'Poppins', sans-serif;
@@ -313,6 +314,33 @@ header {
 
 @media (min-width: 700px) {
 
+  .header__img img {
+    width: 250px;
+  }
+
+  .btn__white {
+    font-size: var(--fs-400);
+    padding: .5rem 2rem;
+  }
+
+  .hero {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    font-size: var(--fs-850);
+  }
+
+  .hero__text {
+    width: 50%;
+  }
+
+  .btn__pink {
+    font-size: var(--fs-400);
+    padding: 2rem 4rem;
+  }
+
   .stats {
     display: flex;
     flex-direction: row;
@@ -348,18 +376,33 @@ header {
   .conversations__title,
   .users__title {
     padding-bottom: 1rem;
+    font-size: var(--fs-600);
+  }
+
+  .build__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-700);
+    text-align: center;
   }
 
   .footer__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    grid-template-columns: 500px 500px;
     align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
   }
 
   .newsletter {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  .newsletter__title h2 {
+    font-size: var(--fs-700);
   }
 
   .footer__company__info {
