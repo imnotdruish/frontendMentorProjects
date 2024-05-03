@@ -31,6 +31,7 @@
   --fs-800: 2rem;
   --fs-850: 2.5rem;
   --fs-900: 4rem;
+  --fs-950: 5rem;
 
   --ff-accent: 'Poppins', sans-serif;
   --ff-default: 'Open Sans', sans-serif;
@@ -314,6 +315,11 @@ header {
 
 @media (min-width: 700px) {
 
+  header {
+    padding-top: 5rem;
+    margin-bottom: 8rem;
+  }
+
   .header__img img {
     width: 250px;
   }
@@ -333,7 +339,8 @@ header {
   }
 
   .hero__text {
-    width: 50%;
+    font-size: var(--fs-500);
+    width: 60%;
   }
 
   .btn__pink {
@@ -344,6 +351,27 @@ header {
   .stats {
     display: flex;
     flex-direction: row;
+    padding: 2rem 0;
+  }
+
+  .communities__img img,
+  .messages__img img {
+    width: 40px;
+  }
+
+  .number {
+    font-size: var(--fs-950);
+  }
+
+  .text {
+    font-size: var(--fs-500);
+  }
+
+  .grow,
+  .conversations,
+  .users {
+    margin: 2rem 0;
+    padding: 5rem;
   }
 
   .grow__content,
@@ -351,6 +379,7 @@ header {
   .users__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 20ch 0;
     gap: 2rem;
     text-align: left;
   }
@@ -359,7 +388,7 @@ header {
   .users__img,
   .conversations__title,
   .conversations__text {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
   }
 
@@ -368,7 +397,7 @@ header {
   .conversations__img,
   .users__title,
   .users__text {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
 
@@ -388,12 +417,18 @@ header {
     text-align: center;
   }
 
+  .hero__container button,
+  .build__button button {
+    padding: 2rem 8rem;
+  }
+
   .footer__content {
     display: grid;
-    grid-template-columns: 500px 500px;
-    align-items: center;
+    grid-template-columns: minmax(200px, 500px) minmax(200px, 500px);
     justify-content: space-between;
     gap: 1rem;
+    padding-top: 30ch;
+    margin: 0 2rem;
   }
 
   .newsletter {
@@ -403,6 +438,13 @@ header {
 
   .newsletter__title h2 {
     font-size: var(--fs-700);
+  }
+
+  .newsletter__form form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer__company__info {
