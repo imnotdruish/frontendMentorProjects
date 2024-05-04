@@ -1,0 +1,89 @@
+/* Basics & Variables */
+:root {
+
+    /* Sub-Heading for app UI */
+    --clr-accent: 276, 100%, 81%;
+    --clr-accent-hsl: hsl(var(--clr-accent));
+    
+    /* Chat on Left */
+    --clr-primary: 276, 55%, 52%;
+    --clr-primary-hsl: hsl(var(--clr-primary));
+    
+    /* Chat on Right */
+    --clr-primary-dark: 271, 15%, 43%;
+    --clr-primary-dark-hsl: hsl(var(--clr-primary-dark));
+    
+    /* Placeholder Text */
+    --clr-neutral: 206, 6%, 79%;
+    --clr-neutral-hsl: hsl(var(--clr-neutral));
+
+    /* Main Heading */
+    --clr-neutral-very-dark: 271, 36%, 24%;
+    --clr-neutral-very-dark-hsl: hsl(var(--clr-neutral-very-dark));
+
+    /* Paragraph */
+    --clr-neutral-dark: 270, 7%, 64%;
+    --clr-neutral-dark-hsl: hsl(var(--clr-neutral-dark));
+
+    /* Gradients */
+    --clr-gradient: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    
+    /* Neutral White */
+    --clr-neutral-light: 0, 0%, 100%;
+    --clr-neutral-light-hsl: hsl(var(--clr-neutral-light));
+
+    /* App Background */
+    --clr-neutral-grey: 270, 20%, 96%;
+    --clr-neutral-grey-hsl: hsl(var(--clr-neutral-grey));
+
+    /* Submit Button Background */
+    --clr-bg-submit: 271, 36%, 24%;
+    --clr-bg-submit-hsl: hsl(var(--clr-bg-submit));
+
+    /* Radio Button Outline */
+    --clr-bg-radio: 289, 100%, 72%;
+    --clr-bg-radio-hsl: hsl(var(--clr-bg-submit));
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+  
+    --fs-200: 0.8275rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-850: 2.5rem;
+    --fs-900: 4rem;
+    --fs-950: 5rem;
+  
+    --ff-default: 'Rubik', sans-serif;
+  }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/* Main Site */
+
+
+/* Frontend Mentor Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
