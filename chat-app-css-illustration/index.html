@@ -12,88 +12,97 @@
     <title>Frontend Mentor | Chat App CSS Illustration</title>
   </head>
   <body>
-    <section class="phone">
-      <div class="heading">
-        <div class="img__arrow">
-          <i class="fa-solid fa-chevron-left"></i>
-        </div>
-        <div class="img__profile">
-          <img src="images/avatar.jpg" alt="Profile Picture of Samuel Green">
-        </div>
-        <div class="heading__name__info">
-          <div class="heading__name">
-            <h2>Samuel Green</h2>
+    <div class="wrapper">
+      <section class="phone">
+        <div class="heading">
+          <div class="img__arrow">
+            <i class="fa-solid fa-chevron-left"></i>
           </div>
-          <div class="heading__info">
-            <p>Available to Walk</p>
+          <div class="img__profile">
+            <img src="images/avatar.jpg" alt="Profile Picture of Samuel Green">
+          </div>
+          <div class="heading__name__info">
+            <div class="heading__name">
+              <h2>Samuel Green</h2>
+            </div>
+            <div class="heading__info">
+              <p>Available to Walk</p>
+            </div>
+          </div>
+          <div class="img__dots">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>
-        <div class="img__dots">
-          <i class="fa-solid fa-ellipsis-vertical"></i>
+        <div class="sent__messages">
+          <p>
+            That sounds great. I’d be happy with that.
+          </p>
         </div>
-      </div>
-      <div class="sent__messages">
-        <p>
-          That sounds great. I’d be happy with that.
-        </p>
-      </div>
-      <div class="sent__messages">
-        <p>
-          Could you send over some pictures of your dog, please?
-        </p>
-      </div>
-      <div class="received__img">
-        <img src="images/dog-image-1.jpg" alt="Close-up of dogs face">
-        <img src="images/dog-image-2.jpg" alt="Dog laying down">
-        <img src="images/dog-image-3.jpg" alt="Dog with large stick in the mouth">
-      </div>
-      <div class="received__messages">
-        <p>
-          Here are a few pictures. She’s a happy girl!
-        </p>
-      </div>
-      <div class="received__messages">
-        <p>
-          Can you make it?
-        </p>
-      </div>
-      <div class="sent__messages">
-        <p>
-          She looks so happy! The time we discussed works. How long shall I take her out for?
-        </p>
-      </div>
-      <div class="options">
-        <ul>
-          <li>30 minute walk <span>$29</span></li>
-        </ul>
-      </div>
-      <div class="options">
-        <ul>
-          <li>1 hour walk <span>$49</span></li>
-        </ul>
-      </div>
-      <div class="messages__input">
-        <p>
-          Type a message…
-        </p>
-        <div class="right__arrow">
-          <i class="fa-solid fa-chevron-right"></i>
+        <div class="sent__messages">
+          <p>
+            Could you send over some pictures of your dog, please?
+          </p>
         </div>
-      </div>
-    </section>
-    <section class="simple">
-      <h1 class="simple__heading">
-        Simple booking
-      </h1>
-      <p class="simple__text">
-        Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
-      </p>
-    </section>
-    <footer>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="https://www.frontendmentor.io/profile/imnotdruish">Dan June</a>.
-      </div>
-    </footer>
+        <div class="received__img">
+          <img src="images/dog-image-1.jpg" alt="Close-up of dogs face">
+          <img src="images/dog-image-2.jpg" alt="Dog laying down">
+          <img src="images/dog-image-3.jpg" alt="Dog with large stick in the mouth">
+        </div>
+        <div class="received__messages">
+          <p>
+            Here are a few pictures. She’s a happy girl!
+          </p>
+        </div>
+        <div class="received__messages">
+          <p>
+            Can you make it?
+          </p>
+        </div>
+        <div class="sent__messages">
+          <p>
+            She looks so happy! The time we discussed works. How long shall I take her out for?
+          </p>
+        </div>
+        <div class="options">
+          <label>
+            <div class="radio__option">
+              <input type="radio" class="radio" name="option">
+              <p>30 minute walk</p> 
+            </div>
+            <span class="price">$29</span>
+          </label>
+          <label>
+            <div class="radio__option">
+              <input type="radio" class="radio" name="option">
+              <p>1 hour walk</p> 
+            </div>
+            <span class="price">$49</span>
+          </label>
+        </div>
+        <div class="messages__input">
+          <div class="messages__input__placeholder">
+            <textarea class="messages__input__text" placeholder="Type a message...">
+            </textarea>
+          </div>
+          <div class="right__arrow">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </section>
+      <section class="simple">
+        <h1 class="simple__heading">
+          Simple booking
+        </h1>
+        <p class="simple__text">
+          Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
+        </p>
+      </section>
+      <footer>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://www.frontendmentor.io/profile/imnotdruish">Dan June</a>.
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

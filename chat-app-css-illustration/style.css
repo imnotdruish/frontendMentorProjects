@@ -8,6 +8,10 @@
     /* Chat on Left */
     --clr-primary: 276, 55%, 52%;
     --clr-primary-hsl: hsl(var(--clr-primary));
+
+    /* Chat Background on Left */
+    --clr-bg-left-chat: 274, 42%, 93%;
+    --clr-bg-left-chat-hsl: hsl(var(--clr-bg-left-chat)); 
     
     /* Chat on Right */
     --clr-primary-dark: 271, 15%, 43%;
@@ -27,7 +31,8 @@
 
     /* Gradients */
     --clr-gradient: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    
+    --clr-reverse-gradient: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
     /* Neutral White */
     --clr-neutral-light: 0, 0%, 100%;
     --clr-neutral-light-hsl: hsl(var(--clr-neutral-light));
@@ -66,14 +71,170 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-img {
-  width: 100%;
+  font-family: var(--ff-default);
 }
 
 /* Main Site */
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-bottom: 1rem;
+  border: 15px solid var(--clr-neutral-light-hsl);
+  border-radius: 3rem;
+  background-color: var(--clr-neutral-grey-hsl);
+  overflow: hidden;
+  box-shadow: 0 0 5px 5px hsl(var(--clr-neutral), 0.5);
+  max-width: 400px;
+  font-size: var(--fs-200);
+}
+
+.heading {
+  position: relative;
+  width: 100%;
+  color: var(--clr-neutral-light-hsl);
+  background: var(--clr-gradient);
+  border-radius: 0 0 .5rem .5rem;
+  padding: 2rem 1rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  box-shadow: 0 0 5px 5px hsl(var(--clr-neutral), 0.2);
+}
+
+.heading h2 {
+  font-size: var(--fs-400);
+}
+
+.heading__info p {
+  font-size: var(--fs-200);
+  color: var(--clr-accent-hsl);
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-neutral-light-hsl);
+  width: 55%;
+  height: 20px;
+  border-radius: 0rem 0rem .8rem .8rem;
+}
+
+.img__profile img {
+  border: 2px solid var(--clr-neutral-light-hsl);
+  border-radius: 50%;
+  width: 30px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.sent__messages {
+  color: var(--clr-primary-hsl);
+  background-color: var(--clr-bg-left-chat-hsl);
+  padding: 1rem;
+  margin: .75rem;
+  align-self: flex-start;
+  border-radius: 1rem 1rem 1rem .5rem;
+  box-shadow: 0 0 5px 0 hsl(var(--clr-neutral), 0.2);
+}
+
+.received__messages {
+  color: var(--clr-primary-dark-hsl);
+  background-color: var(--clr-neutral-light-hsl);
+  padding: 1rem;
+  margin: .5rem;
+  align-self: flex-end;
+  max-width: 60%;
+  border-radius: 1rem 1rem .5rem 1rem;
+  box-shadow: 0 0 5px 0 hsl(var(--clr-neutral), 0.2);
+}
+
+.received__img {
+  display: flex;
+  gap: .75rem;
+  align-self: flex-end;
+  margin: 1rem;
+}
+
+.received__img img {
+  width: 60px;
+  border-radius: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-neutral-light-hsl);
+  background: var(--clr-reverse-gradient);
+  padding: 1rem;
+  margin: .75rem;
+  border-radius: 1rem 1rem 1rem .5rem;
+}
+
+.radio__option {
+  display: flex;
+  gap: .5rem;
+  padding-right: 2rem;
+}
+
+.radio {
+  background: none;
+  display: inline-block;
+  padding-left: .5rem;
+}
+
+input[type="radio"] {
+  background: transparent;
+  accent-color: var(--clr-accent-hsl);
+}
+
+.price {
+  font-weight: var(--fw-bold);
+}
+
+.messages__input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 1000vh;
+  background-color: var(--clr-neutral-light-hsl);
+  margin-inline: 2rem;
+  padding: .5rem;
+}
+
+.messages__input__placeholder textarea {
+  border: none;
+  resize: none;
+  color: var(--clr-neutral-hsl);
+}
+
+.right__arrow i {
+  background-color: var(--clr-bg-submit-hsl);
+  color: var(--clr-neutral-light-hsl);
+  border-radius: 50%;
+  padding: .5rem;
+  aspect-ratio: 1;
+}
 
 /* Frontend Mentor Footer */
 .attribution {
