@@ -205,7 +205,7 @@ label {
 
 input[type="radio"] {
   background: transparent;
-  accent-color: var(--clr-accent-hsl);
+  border: 1px solid var(--clr-accent-hsl);
 }
 
 .price {
@@ -213,27 +213,40 @@ input[type="radio"] {
 }
 
 .messages__input {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
   justify-content: space-between;
   border-radius: 1000vh;
+  gap: 1rem;
+  text-align: center;
+  width: 95%;
   background-color: var(--clr-neutral-light-hsl);
-  margin-inline: 2rem;
   padding: .5rem;
 }
 
-.messages__input__placeholder textarea {
+.messages__input__placeholder input {
   border: none;
   resize: none;
   color: var(--clr-neutral-hsl);
+  font-family: var(--ff-default);
+  align-self: center;
+  justify-self: center;
 }
 
+.right__arrow button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
 .right__arrow i {
   background-color: var(--clr-bg-submit-hsl);
   color: var(--clr-neutral-light-hsl);
-  border-radius: 50%;
+  border-radius: 100%;
   padding: .5rem;
   aspect-ratio: 1;
+  align-self: center;
+  justify-self: center;
 }
 
 /* Frontend Mentor Footer */
