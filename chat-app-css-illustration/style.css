@@ -315,14 +315,6 @@ input[type="radio"] {
 /* Media Queries */
 
 @media (min-width: 1000px) {
-  .wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: auto;
-    padding: auto;
-  }
 
   body::before {
     height: 110vh;
@@ -332,5 +324,14 @@ input[type="radio"] {
   body::after {
     height: 110vh;
     width: 600px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem;
+    padding: auto;
   }
 }
