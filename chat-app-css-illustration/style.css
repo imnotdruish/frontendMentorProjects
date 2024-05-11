@@ -88,10 +88,10 @@ body::before {
   background: var(--clr-to-bottom-gradient);
   top: -250px;
   left: -125px;
-  height: 75vh;
-  width: 300px;
+  height: 110vh;
+  width: 400px;
   z-index: -1;
-  border-radius: 1000vh;
+  border-radius: 0 0 1000vh 0;
 }
 
 body::after {
@@ -110,7 +110,6 @@ body::after {
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: auto;
 }
 
 .phone {
@@ -118,7 +117,7 @@ body::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 10vh auto;
   padding-bottom: 1rem;
   border: 15px solid var(--clr-neutral-light-hsl);
   border-radius: 3rem;
@@ -135,7 +134,8 @@ body::after {
   color: var(--clr-neutral-light-hsl);
   background: var(--clr-gradient);
   border-radius: 0 0 .5rem .5rem;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
+  margin-bottom: .75rem;
   display: grid;
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
@@ -168,7 +168,7 @@ body::after {
 .img__profile img {
   border: 2px solid var(--clr-neutral-light-hsl);
   border-radius: 50%;
-  width: 30px;
+  width: 40px;
   aspect-ratio: 1;
   overflow: hidden;
 }
@@ -176,8 +176,9 @@ body::after {
 .sent__messages {
   color: var(--clr-primary-hsl);
   background-color: var(--clr-bg-left-chat-hsl);
-  padding: 1rem;
-  margin: .75rem;
+  padding: .75rem;
+  margin: .5rem .75rem;
+  max-width: 60%;
   align-self: flex-start;
   border-radius: 1rem 1rem 1rem .5rem;
   box-shadow: 0 0 5px 0 hsl(var(--clr-neutral), 0.2);
@@ -186,8 +187,8 @@ body::after {
 .received__messages {
   color: var(--clr-primary-dark-hsl);
   background-color: var(--clr-neutral-light-hsl);
-  padding: 1rem;
-  margin: .5rem;
+  padding: .75rem;
+  margin: .5rem .75rem;
   align-self: flex-end;
   max-width: 60%;
   border-radius: 1rem 1rem .5rem 1rem;
@@ -198,7 +199,7 @@ body::after {
   display: flex;
   gap: .75rem;
   align-self: flex-end;
-  margin: 1rem;
+  margin: 1rem .75rem 0 .75rem;
 }
 
 .received__img img {
@@ -218,7 +219,7 @@ label {
   color: var(--clr-neutral-light-hsl);
   background: var(--clr-reverse-gradient);
   padding: 1rem;
-  margin: .75rem;
+  margin: .5rem .75rem;
   border-radius: 1rem 1rem 1rem .5rem;
 }
 
@@ -270,13 +271,15 @@ input[type="radio"] {
   border: none;
   background: transparent;
   cursor: pointer;
-}
-.right__arrow i {
   background-color: var(--clr-bg-submit-hsl);
   color: var(--clr-neutral-light-hsl);
-  border-radius: 100%;
+  border-radius: 50%;
   padding: .5rem;
   aspect-ratio: 1;
+}
+.right__arrow i {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
   align-self: center;
   justify-self: center;
 }
