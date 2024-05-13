@@ -325,8 +325,9 @@ input[type="radio"] {
 @media (min-width: 1000px) {
 
   body::before {
-    height: 120vh;
+    height: 130vh;
     width: 600px;
+    top: -400px;
     left: -150px;
     border-radius: 1000vh;
   }
@@ -335,7 +336,7 @@ input[type="radio"] {
     height: 120vh;
     width: 600px;
     right: -150px;
-    bottom: -300px;
+    bottom: -400px;
     border-radius: 1000vh;
   }
 
@@ -350,5 +351,13 @@ input[type="radio"] {
 
   .phone {
     margin: 2rem;
+  }
+
+  .simple {
+    align-items: unset;
+  }
+
+  .simple__text {
+    text-align: left;
   }
 }
