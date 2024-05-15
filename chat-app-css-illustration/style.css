@@ -307,7 +307,7 @@ input[type="radio"] {
   color: var(--clr-neutral-dark-hsl);
   line-height: 1.7rem;
   text-align: center;
-  max-width: 350px;
+  max-width: 450px;
 }
 
 /* Frontend Mentor Footer */
