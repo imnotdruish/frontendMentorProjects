@@ -85,15 +85,21 @@ h1 {
 .rating__number {
   background-color: var(--clr-neutral-dark);
   color: var(--clr-neutral-light);
-  padding: .5rem 1rem;
+  width: 50px;
   border: none;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
 }
 
-.rating__number:hover,
-.rating__number:focus-within {
+.ratings > button:hover,
+.ratings > button:focus-within {
   background-color: var(--clr-primary);
+  color: var(--clr-neutral);
+}
+
+.ratings > button:hover ~ button:before,
+.ratings > button:focus-within ~ button:before {
+  background-color: var(--clr-neutral-light);
   color: var(--clr-neutral);
 }
 
@@ -110,6 +116,12 @@ h1 {
   border-radius: 1000vh;
   border: none;
   width: 100%;
+}
+
+.submit:hover,
+.submit:focus-within {
+  background-color: var(--clr-neutral);
+  color: var(--clr-primary);
 }
 
 .selection__container {
