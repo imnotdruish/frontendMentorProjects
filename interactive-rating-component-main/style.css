@@ -56,7 +56,7 @@ h1 {
 }
 
 .rating__container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
@@ -125,7 +125,15 @@ h1 {
 }
 
 .selection__container {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--clr-gradient);
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
 }
 
 .attribution {
