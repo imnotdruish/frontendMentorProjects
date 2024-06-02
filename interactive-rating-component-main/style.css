@@ -56,7 +56,7 @@ h1 {
 }
 
 .rating__container {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
